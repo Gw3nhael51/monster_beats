@@ -67,15 +67,15 @@ def create_db():
     # Liste des créatures jouables
     creatures = [
         #   (name_creature, hp_initial, attack_value, defense_value, spec_attack_name, spec_attack_value, spec_attack_descr)
-        ("Démon", 45, 10, 4, "Épée de l'Enfer", 20, "Inflige des dégâts massifs"),
-        ("Troll", 60, 6, 6, "Rage", 15, "Double l'attaque pendant un tour"),
-        ("Sorcière", 35, 11, 4, "Malédiction", 3, "Réduit l'attaque de l'adversaire de -3PV pendant 2 tours"),
-        ("Licorne", 40, 8, 8, "Soin magique", 10, "Restaure de 10 PV, utilisable une fois"),
-        ("Centaure", 50, 9, 6, "Charge rapide", 3, "Inflige un dégât doublé mais perd 3PV en contre coup"),
-        ("Guerrier noir", 55, 8, 7, "Parade Héroïque", 0, "Bloque l'attaque complète au prochain tour"),
-        ("Dragon", 50, 10, 5, "Souffle de feu", 30, "Brûle l'ennemi, perte de vie a l'ennemi en plus part tour"),
-        ("Loup-garou", 45, 9, 6, "Appel de la meute", 3, "Inflige un dégât multiplié par 3"),
-        ("Elfe", 40, 9, 5, "Tir précis", 8, "Inflige 8 dégâts garantis en ignorant la défense de l'adversaire.")
+        ("Démon", 50, 9, 5, "Épée de l'Enfer", 18, "Inflige de lourds dégâts bruts"),
+        ("Troll", 65, 7, 7, "Rage", 12, "Double l'attaque pendant un tour"),
+        ("Sorcière", 40, 8, 4, "Malédiction", 3, "Réduit l'attaque adverse de -3 pendant 2 tours"),
+        ("Licorne", 45, 7, 8, "Soin magique", 12, "Restaure 12 PV, utilisable une fois"),
+        ("Centaure", 55, 9, 6, "Charge rapide", 4, "Inflige un dégât doublé mais perd 4 PV en contre-coup"),
+        ("Guerrier noir", 60, 8, 7, "Parade Héroïque", 0, "Bloque complètement la prochaine attaque"),
+        ("Dragon", 55, 10, 6, "Souffle de feu", 20, "Brûle l'ennemi, perte de PV par tour"),
+        ("Loup-garou", 50, 9, 6, "Appel de la meute", 4, "Inflige un dégât multiplié par 3"),
+        ("Elfe", 45, 8, 5, "Tir précis", 10, "Inflige 10 dégâts garantis en ignorant la défense")
     ]
 
     cur.executemany("""
