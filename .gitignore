@@ -1,7 +1,7 @@
 .venv
 .idea
 .sqlite3
-.db
+*.db
 ./database/game.db
 __pycache__/
 *.pyc
