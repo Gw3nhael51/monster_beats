@@ -1,6 +1,14 @@
 # db_connect.py
 import sqlite3
-from database.create_db import DB_PATH
+from pathlib import Path
+
+# On importe uniquement depuis le bon module
+from database.create_db import create_db, DB_PATH
+
+# Si la DB n'existe pas, on la crée automatiquement
+if not DB_PATH.exists():
+    print("⚠️ Base de données absente, création automatique...")
+    create_db()
 
 def get_connection():
     try:
@@ -13,7 +21,6 @@ def get_connection():
         print("Erreur de connexion à la base :", error)
         return None, None
 
-# Variables globales pour compatibilité avec le code existant
 def init_global_connection():
     global sqliteConnection, c
     sqliteConnection, c = get_connection()
@@ -22,6 +29,5 @@ def init_global_connection():
 # Initialisation par défaut
 sqliteConnection, c = init_global_connection()
 
-# test unitaire
 if __name__ == '__main__':
     get_connection()
