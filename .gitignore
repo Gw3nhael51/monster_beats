@@ -1,8 +1,19 @@
-.venv
-.idea
-.sqlite3
-*.db
-./database/game.db
+# Environnements virtuels
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Python cache
 __pycache__/
 *.pyc
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# macOS
 .DS_Store
